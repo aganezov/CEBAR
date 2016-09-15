@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
+import enum
+
+
+class Orientation(enum.Enum):
+    forward = "+"
+    reverse = "-"
 
 
 class Block(object):
-    pass
+    def __init__(self, name, orientation=Orientation.forward):
+        self.orientation = orientation
+        self.name = name
