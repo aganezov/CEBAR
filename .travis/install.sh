@@ -5,7 +5,7 @@ if [ "$TRAVIS_OS_NAME" = 'osx' ]; then
     brew tap homebrew/science
     brew install pyenv
     brew install mercurial
-    brew insall gfortran
+    brew install gfortran
     case "$PYTHON" in
     "2.7")
      pyenv install 2.7.11
