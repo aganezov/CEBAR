@@ -2,5 +2,6 @@ confuse
 six
 pytest
 hypothesis
+numpy
 scipy
 ete3
