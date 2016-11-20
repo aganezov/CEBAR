@@ -5,7 +5,7 @@ from hypothesis import given, assume, strategies as s
 
 
 class BlockTestCase(unittest.TestCase):
-    ORIENTATIONS = [Orientation.forward, Orientation.reverse]
+    ORIENTATIONS = [Orientation.forward, Orientation.reverse, Orientation.unknown]
 
     @given(name=s.text())
     def test_default_orientation(self, name):
@@ -17,7 +17,10 @@ class BlockTestCase(unittest.TestCase):
         block = Block(name="name", orientation=orientation)
         self.assertEqual(block.orientation, orientation)
         block.reverse()
-        self.assertNotEqual(block.orientation, orientation)
+        if orientation == Orientation.unknown:
+            self.assertEqual(block.orientation, orientation)
+        else:
+            self.assertNotEqual(block.orientation, orientation)
         self.assertIn(block.orientation, self.ORIENTATIONS)
 
     @given(name=s.text(), orientation=s.sampled_from(ORIENTATIONS), show_plus=s.booleans())

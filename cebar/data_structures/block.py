@@ -15,6 +15,8 @@ class Block(object):
         self.name = name
 
     def reverse(self):
+        if self.orientation == Orientation.unknown:
+            return
         self.orientation = Orientation.forward if self.orientation == Orientation.reverse else Orientation.reverse
 
     def as_string(self, show_plus=True):
