@@ -5,6 +5,7 @@ import enum
 class Orientation(enum.Enum):
     forward = "+"
     reverse = "-"
+    unknown = "?"
 
 
 class Block(object):
