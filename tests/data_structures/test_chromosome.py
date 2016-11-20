@@ -2,7 +2,7 @@
 import unittest
 from hypothesis import given, strategies as s
 
-from cebar.sim.chromosome import CHRTYPE, Chromosome
+from cebar.data_structures.chromosome import CHRTYPE, Chromosome
 
 
 class ChromosomeTestCase(unittest.TestCase):

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 import enum
 
 
@@ -16,5 +17,5 @@ class Block(object):
     def reverse(self):
         self.orientation = Orientation.forward if self.orientation == Orientation.reverse else Orientation.reverse
 
-    def as_string(self, show_plus):
+    def as_string(self, show_plus=True):
         return "{sign}{name}".format(sign="" if self.orientation == Orientation.forward and not show_plus else self.orientation.value, name=self.name)

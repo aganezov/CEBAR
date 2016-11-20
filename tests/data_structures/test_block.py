@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
-from cebar.sim.block import Block, Orientation
-from hypothesis import given, assume, strategies as s
-
 from cebar.data_structures.block import Block, Orientation
+from hypothesis import given, assume, strategies as s
 
 
 class BlockTestCase(unittest.TestCase):
