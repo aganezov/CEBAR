@@ -5,3 +5,4 @@ hypothesis
 numpy
 scipy
 ete3
+jcvi
